@@ -25,7 +25,7 @@ module.exports = NodeHelper.create({
 
 		request({ url: bibleGatewayURL, method: 'GET' }, function(error, response, body) {			
 			if(!error && response.statusCode == 200){
-				console.log(body);
+				//console.log(body);
 				var result = JSON.parse(body);
 				self.sendSocketNotification('BIBLE_GATEWAY_RESULT', result);
 			}
