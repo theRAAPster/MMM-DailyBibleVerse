@@ -2,7 +2,10 @@
 This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror). It will display the verse of the day from www.biblegateway.com. You can change the version of the verse of the day in the config file. Here is a list of the supported Bible versions: https://www.biblegateway.com/versions/
 
 ## Installation
-1. Navigate into your MagicMirror's `modules` folder and execute `https://github.com/arthurgarzajr/MMM-DailyBibleVerse.git`.
+1. Navigate into your MagicMirror's `modules` folder 
+2. Execute `git clone https://github.com/arthurgarzajr/MMM-DailyBibleVerse.git`
+3. Navigate to newly created folder `MMM-DailyBibleVerse`
+4. Execute `npm install`
 
 ## Using the module
 
@@ -13,8 +16,8 @@ modules: [
 		module: 'MMM-DailyBibleVerse',
 		position: 'bottom_bar',	// This can be any of the regions. Best result is in the bottom_bar as verses can take multiple lines in a day.
 		config: {
-            version: 'NIV', // This can be changed to any version you want that is offered by Bible Gateway. For a list, go here: https://www.biblegateway.com/versions/,
-	    size: 'small' // default value is medium, but can be changed. 
+			version: 'NIV', // This can be changed to any version you want that is offered by Bible Gateway. For a list, go here: https://www.biblegateway.com/versions/,
+	    	size: 'small' // default value is medium, but can be changed. 
 		}
 	}
 ]
@@ -37,8 +40,10 @@ The following properties can be configured:
 		<tr>
 			<td><code>version</code></td>
 			<td>Here is a list of the supported Bible versions: https://www.biblegateway.com/versions/
-      <br/>
-      Examples: <code>ESV</code>, <code>NIV</code>, <code>RV1960</code>, etc.
+      		<br/>
+			Note that <code>version</code> also determines the language of the Bible verse. The language of the Bible reference, i.e. name of the book, is determined by the global <code>language</code> parameter in your config 
+			<br/>
+      		Examples: <code>ESV</code>, <code>NIV</code>, <code>RV1960</code>, etc.
 			</td>
 		</tr>
 		<tr>
@@ -50,6 +55,7 @@ The following properties can be configured:
 
 ## Dependencies
 - Access to the internet to download verse of the day from www.biblegateway.com.
+- npm package `request`
 
 The MIT License (MIT)
 =====================
